@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione totam eos corrupti qui sunt. Dolore consequatur, magnam cupiditate sequi, perspiciatis error amet id numquam harum molestias ipsum? Nulla, tempora quidem!">
+    <meta name="author" content="Hacodev">
+    <meta property="og:site_name" content="Hacodev" />
+    <meta property="og:site" content="https://www.hacodev.com" />
+    <meta property="og:title" content="Hacodev MNIT" />
+    <meta property="og:description" content="Hacodev is a coding club of MNIT by the students for the students." />
+    <meta property="og:image" content="images/logo.png" />
+    <meta property="og:url" content="https://www.hacodev.com" />
+    <meta property="og:type" content="article" />
+
+    <!-- Webpage Title -->
+    <title>Hacodev - Power of 011</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Favicon  -->
+    <link rel="apple-touch-icon"type="image/x-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" type="image/x-icon"  sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" type="image/x-icon"  sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" type="image/x-icon"  sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" type="image/x-icon"  sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" type="image/x-icon"  sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" type="image/x-icon"  sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" type="image/x-icon"  sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" type="image/x-icon"  sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+</head>
+<style>
+    section {
+        position: absolute;
+        border-radius: 50%;
+        left: 0;
+        top: 0;
+    }
+
+    .navbar-brand {
+        animation: shake 1s;
+    }
+
+    @keyframes shake {
+        0% {
+            transform: translateX(0)
+        }
+
+        25% {
+            transform: translateX(25px);
+        }
+
+        50% {
+            transform: translateX(-25px);
+        }
+
+        100% {
+            transform: translateX(0px);
+        }
+    }
+    .what-image:hover {
+    -moz-transform: translate(-2px, -2px);
+    -ms-transform: translate(-2px, -2px);
+    -o-transform: translate(-2px, -2px);
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px)
+}
+.hr2{
+    display: block; height: 3px;
+    border: 0; border-top: 3px solid #834cca;
+    margin: 1em 0; padding: 0;
+    width: 10%;
+}
+.team-icon:hover{
+    -moz-transform: translate(-2px, -2px);
+    -ms-transform: translate(-2px, -2px);
+    -o-transform: translate(-2px, -2px);
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+    cursor: pointer;
+}
+.hide {
+  display: none;
+}
+    
+.tag-line:hover + .hide {
+  display: block;
+  color: red;
+}
+.contact-banner{
+background-image: url('https://6lli539m39y3hpkelqsm3c2fg-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/coding_shutterstock_535124956-675x380.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+position: relative;
+}
+.contact-banner::before{
+    content: "";
+  position: absolute;
+  left: 0; right: 0;
+  top: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+}
+.alert-warning{
+    background-color: rgba(131, 76, 202, 0.5);
+    color: #fff;
+    border: 0;
+}
+</style>
+
+<body data-spy="scroll" data-target=".fixed-top">
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+
+            <!-- Text Logo -->
+            <a class="navbar-brand logo-text page-scroll" href="main.html"><span
+                    style="color: #834cca;font-weight: bold;"><</span>Haco<span style="color: #834cca;">dev</span><span
+                            style="color: white; font-weight: bold;">/></span></a>
+
+            <!-- Image Logo -->
+            <!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.png" alt="alternative"></a> -->
+
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="main.html">Home <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#what-hacodev">About</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#events">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div> <!-- end of navbar-collapse -->
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+
+
+    <!-- Header -->
+    <header id="header" class="header" style="padding-top: 6rem;">
+        <!-- remove padding-top from above if there is any problem -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center order-md-2 order-lg-2 order-sm-1">
+                    <a class="popup-with-move-anim" href="#details-1-lightbox"><img class="img-fluid mt-md-5 mb-4"
+                            src="images/logo.png" alt="alternative" style="cursor: pointer;"></a>
+                            <h4 class="ml-md-5 tag-line">Power of <span style="color: #834cca; cursor: pointer;">0 1 1</span></h4>
+                            
+                </div> <!-- end of col -->
+                <div class="col-lg-6 order-md-1 order-lg-1 order-sm-2">
+                    <div class="text-container">
+                        <h1>Technical Club <br>for <br><span id="js-rotating">HACKERS, DEVELOPERS, CODERS</span></h1>
+                        <p class="p-large">A collab of amazing enthusiasts working under different technical fields namely web development, app development and ethical hacking, programming and many more.</p>
+                        <a class="btn-solid-lg" href="#what-hacodev" style="cursor: pointer;">Explore</a>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+    
+    <!-- Lightbox 1-->
+    <div id="details-1-lightbox" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-7 d-flex align-items-center">
+                <div class="image-container ">
+                    <img class="img-fluid" src="images/modal-1.jpg" alt="alternative">
+                </div> <!-- end of image-container -->
+            </div> <!-- end of col -->
+            <div class="col-lg-5">
+                <h3>You have clicked me by mistake! (50%)</h3>
+                <hr>
+                <p>Now if have come here either you know the path to here or unknowingly. <br> Let me give you some funny
+                    tips Mr. <span id='name' style="font-weight: bold; color: #834cca;">Dev</span></p>
+                <h4>Fun Tips about coding</h4>
+                <ul class="list-unstyled li-space-lg">
+                    <li class="media">
+                        <i class="fas fa-check"></i>
+                        <div class="media-body">There are over 698 different types of coding languages.</div>
+                    </li>
+                    <li class="media">
+                        <i class="fas fa-check"></i>
+                        <div class="media-body">The first computer programmer was a lady, Ada Lovelace.</div>
+                    </li>
+                </ul>
+                <a class="btn-solid-reg mfp-close as-button" role="button">Back</a>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+    <!-- Lightbox 2-->
+    <div id="details-2-lightbox" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-7 d-flex align-items-center">
+                <div class="image-container ">
+                    <img class="img-fluid" src="images/modal-1.jpg" alt="alternative">
+                </div> <!-- end of image-container -->
+            </div> <!-- end of col -->
+            <div class="col-lg-5">
+                <h3>You have clicked me by mistake! (80%)</h3>
+                <hr>
+                <p>Now if have come here either you know the path to here or unknowingly. <br> Let me give you some funny
+                    tips Mr. <span id='name1' style="font-weight: bold; color: #834cca;">Dev</span></p>
+                <h4>Fun Tips about coding</h4>
+                <ul class="list-unstyled li-space-lg">
+                    <li class="media">
+                        <i class="fas fa-check"></i>
+                        <div class="media-body">Google build a backdoor for the FBI to access all of their customer's email.</div>
+                    </li>
+                    <li class="media">
+                        <i class="fas fa-check"></i>
+                        <div class="media-body">The world's most wanted hacker was himself hacked because his password was his cat's name = '123'</div>
+                    </li>
+                </ul>
+                <a class="btn-solid-reg mfp-close as-button" role="button">Back</a>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+    <!-- Lightbox 3-->
+    <div id="details-3-lightbox" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-7 d-flex align-items-center">
+                <div class="image-container ">
+                    <img class="img-fluid" src="images/modal-1.jpg" alt="alternative">
+                </div> <!-- end of image-container -->
+            </div> <!-- end of col -->
+            <div class="col-lg-5">
+                <h3>You have clicked me by mistake! (90%)</h3>
+                <hr>
+                <p>Now if have come here either you know the path to here or unknowingly. <br> Let me give you some funny
+                    tips Mr. <span id='name3' style="font-weight: bold; color: #834cca;">Dev</span></p>
+                <h4>Fun Tips about coding</h4>
+                <ul class="list-unstyled li-space-lg">
+                    <li class="media">
+                        <i class="fas fa-check"></i>
+                        <div class="media-body">LinkedIn was sued for hacking their user's email adresses with LinkedIn invites.</div>
+                    </li>
+                    <li class="media">
+                        <i class="fas fa-check"></i>
+                        <div class="media-body">Almost anything powered by electricity requires code.</div>
+                    </li>
+                </ul>
+                <a class="btn-solid-reg mfp-close as-button" role="button">Back</a>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-3 -->
+    <!-- end of lightbox -->
+<!-- About -->
+<div class="basic-2 bg-dark-blue" id="what-hacodev">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="image-container text-center mt-md-4">
+                    <!-- images/details-1.png -->
+                    <a class="popup-with-move-anim" href="#details-2-lightbox"><img class="img-fluid what-image" src="images/details.jpg" alt="alternative" style="height: 80%; width: 80%; border-radius: 20px;"></a>
+                    
+                </div> <!-- end of image-container -->
+            </div> <!-- end of col -->
+            <div class="col-lg-6">
+                <div class="text-container">
+                    <h2>What is <span style="color:#834cca;">Hacodev</span> ?</h2>
+                    <p>A collab of amazing enthusiasts working under different technical fields namely web development, app development and ethical hacking, programming and many more. We are on a purpose of building a technical round off environment and looking for resurgence of same. <br> Continuous workshops and amazing learning experience is what you will get joining us.</p>
+                    <a class="btn-solid-reg" href="#events">Great</a>
+                </div> <!-- end of text-container -->
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div>
+<!-- About ends -->
+<!-- Upcoming events -->
+<div class="basic-2" id="events">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-lg-6 order-md-2 order-lg-2 p-3">
+                <div class=" text-center">
+                    <!-- images/details-1.png -->
+                    <!-- <a class="popup-with-move-anim " href="#details-2-lightbox"><img class="img-fluid what-image" src=""></a> -->
+                    <a class="popup-with-move-anim" href="#details-3-lightbox"><img class="img-fluid mt-md-5 mb-4 what-image"
+                        src="https://miro.medium.com/max/10912/1*NYJCiDMs7c323bDBKqzPhg.jpeg" alt="alternative" style="height: 90%;width: 90%; border-radius: 20px;" alt="alternative" style="cursor: pointer;"></a>
+                </div> <!-- end of image-container -->
+            </div> <!-- end of col -->
+            <div class="col-lg-6 order-md-1 order-lg-1" id="events">
+                <div class="text-container">
+                    <h2>Upcoming <span style="color:#834cca;">Events</span> .</h2>
+                    <h3>Web Development Workshop</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dolor veniam error beatae, nemo libero. Lorem ipsum dolor sit amet.</p>
+                    <a class="btn-solid-reg" href="events.html">Check out</a>
+                    <!-- <a class="btn-outline-reg" style="border-color: #834cca !important;color: #834cca;" href="https://bit.ly/3nGxP85" role="button">Register Now</a> -->
+                </div> <!-- end of text-container -->
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div>
+<!-- Upcoming ends -->
+<!-- Past events -->
+<div class="basic-2 bg-dark-blue" id="events">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-lg-6 order-md-1 order-lg-1 p-3">
+                <div class=" text-center">
+                    <!-- images/details-1.png -->
+                    <!-- <a class="popup-with-move-anim " href="#details-2-lightbox"><img class="img-fluid what-image" src=""></a> -->
+                    <a class="popup-with-move-anim" href="#details-3-lightbox"><img class="img-fluid mt-md-5 mb-4 what-image"
+                        src="https://www.developeronrent.com/blogs/wp-content/uploads/2019/09/python-for-web-development.jpg" alt="alternative" style="height: 90%;width: 90%; border-radius: 20px;" alt="alternative" style="cursor: pointer;"></a>
+                </div> <!-- end of image-container -->
+            </div> <!-- end of col -->
+            <div class="col-lg-6 order-md-2 order-lg-2" id="events">
+                <div class="text-container">
+                    <h2>Past <span style="color:#834cca;">Events</span> .</h2>
+                    <h3>Python Basics Workshop</h3>
+                    <p>A 4 days workshop to make you aware with the basics of pyton language. After taking this workshop, you will be able to recognize python syntax and do related stuff further.</p>
+                    <a class="btn-solid-reg" href="events.html">Check out</a>
+                    <a class="btn-outline-reg" style="border-color: #834cca !important;color: #834cca;" href="events.html">All Events</a>
+                </div> <!-- end of text-container -->
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div>
+<!-- Past ends -->
+<!-- Contact us -->
+<div class="basic-2  contact-banner" id="contact" style="padding-top: 3rem;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="text-container text-right">
+                    <h2>Want to <span style="color:#834cca;">contact</span> ?</h2>
+                    <p>If you're facing any troubles registering for our event or there are any other technical issues related to the workshop or software installation, workshop venue or if you just want to share your thoughts with us then, feel free to contact us. We are super active on instagram. So, below given is insta link to our account.</p>
+                    <a class="btn-solid-reg" href="https://www.instagram.com/hacodev_011/" target="_blank">Send message</a>
+                </div> <!-- end of text-container -->
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div>
+<!-- Contact us ends -->
+    <!-- Team -->
+    <div class="slider-1 " id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Meet our <span style="color:#834cca;">Team</span>.</h2>
+                    <hr class="hr2">
+                    <!-- Card Slider -->
+                    <div class="slider-container mt-5">
+                        <div class="swiper-container card-slider">
+                            <div class="swiper-wrapper">
+
+                                <!-- Slide -->
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/sonu.jpeg" alt="alternative">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">"The person with a leadership quality and in depth vision.</p>
+                                            <p class="testimonial-author">Sonu Gupta</p>
+                                            <p style="color:#834cca;">Technical team & Content Writer</p>
+                                            <a href="https://www.instagram.com/s_onu_01" data-toggle="tooltip" title="Follow on Instagram"><i class="fa fa-instagram team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>
+                                            <a href="https://www.linkedin.com/in/sonu-kumar-gupta-81aa23190/" data-toggle="tooltip" title="Connect on Linkedin"><i class="fa fa-linkedin team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>  
+                                        </div>
+                                    </div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+                                 <!-- Slide -->
+                                 <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/aastha.jpeg" alt="alternative">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">"Her designing approach and technical skills will definitely amaze you.</p>
+                                            <p class="testimonial-author">Aastha Mishra</p>
+                                            <p style="color:#834cca;">Technical & Publicity team</p>
+                                            <a href="https://www.instagram.com/aastha5911" data-toggle="tooltip" title="Follow on Instagram"><i class="fa fa-instagram team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>
+                                            <a href="https://www.linkedin.com/in/aastha-mishra-b5248a202" data-toggle="tooltip" title="Connect on Linkedin"><i class="fa fa-linkedin team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>  
+
+                                        </div>
+                                    </div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+                                 <!-- Slide -->
+                                 <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/charu.jpeg" alt="alternative">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">She digs up all the curative content presented to you. She also has good sense of humour.</p>
+                                            <p class="testimonial-author">Charu Bansal</p>
+                                            <p style="color:#834cca;">Social Media Team & Content Writer</p>
+                                            <a href="https://www.instagram.com/charu_bansal___" data-toggle="tooltip" title="Follow on Instagram"><i class="fa fa-instagram team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>
+                                            <a href="https://www.linkedin.com/in/charu-bansal-b4232818b/" data-toggle="tooltip" title="Connect on Linkedin"><i class="fa fa-linkedin team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>  
+                                        </div>
+                                    </div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+                                 <!-- Slide -->
+                                 <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/naman.jpeg" alt="alternative">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">Machine Learning enthusiast with a lot of inbuilt humour. Good human being.</p>
+                                            <p class="testimonial-author">Naman Dhamani</p>
+                                            <p style="color:#834cca;">Technical team (ML)</p>
+                                            <a href="https://www.linkedin.com/in/naman-dhamani-212b15197/" data-toggle="tooltip" title="Connect on Linkedin"><i class="fa fa-linkedin team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>  
+                                            <a href="https://www.github.com/Monsterkanha" data-toggle="tooltip" title="Fork a project!"><i class="fa fa-github team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>                                  
+                                        </div>
+                                    </div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+                                 <!-- Slide -->
+                                 <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/nehal.jpeg" alt="alternative">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">A share market analyser and predicts outcomes of a decision before time.</p>
+                                            <p class="testimonial-author">Nehal Chandra</p>
+                                            <p style="color:#834cca;">Social media & Technical team</p>
+                                            <a href="https://www.instagram.com/nehal_chandra_"data-toggle="tooltip" title="Follow on Instagram"><i class="fa fa-instagram team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>
+                                            <a href="https://www.linkedin.com/in/nehalchandra22/"data-toggle="tooltip" title="Connect on Linkedin"><i class="fa fa-linkedin team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>  
+                                            <a href="#"data-toggle="tooltip" title="Fork a project!"><i class="fa fa-github team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>                                  
+                                        </div>
+                                    </div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+                                 <!-- Slide -->
+                                 <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/prateek.jpeg" alt="alternative">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">Our captionist and fancy designer with great skills in CAD. Approach him below.</p>
+                                            <p class="testimonial-author">Prateek Upadhyay</p>
+                                            <p style="color:#834cca;">CAED expert & Content Writer</p>
+                                            <a href="https://www.instagram.com/prateekupadhyay_official"data-toggle="tooltip" title="Follow on Instagram"><i class="fa fa-instagram team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>
+                                            <a href="https://www.linkedin.com/in/prateek-upadhyay-a6561a200/"data-toggle="tooltip" title="Connect on Linkedin"><i class="fa fa-linkedin team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>  
+                                            <a href="#"data-toggle="tooltip" title="Fork a project!"><i class="fa fa-github team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>                                  
+                                        </div>
+                                    </div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+                                 <!-- Slide -->
+                                 <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/jaspreet.jpeg" alt="alternative">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">His creative ideas speak faster than his words. You should meet him once.</p>
+                                            <p class="testimonial-author">Jaspreet Singh</p>
+                                            <p style="color:#834cca;">Video Editor and Web Dev</p>
+                                            <a href="https://www.instagram.com/jaspreetsingh2727"data-toggle="tooltip" title="Follow on Instagram"><i class="fa fa-instagram team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>
+                                            <a href="https://www.linkedin.com/in/jaspreetsingh2727"data-toggle="tooltip" title="Connect on Linkedin"><i class="fa fa-linkedin team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>  
+                                            <a href="https://www.github.com/jaspreet11111111"data-toggle="tooltip" title="Fork a project!"><i class="fa fa-github team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>                                  
+                                        </div>
+                                    </div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+                                 <!-- Slide -->
+                                 <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/ankur.jpeg" alt="alternative">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">He can hack anyone's attention by his views towards anything. Good learner.</p>
+                                            <p class="testimonial-author">Ankur Narayan</p>
+                                            <p style="color:#834cca;">Technical team (Ethical Hacker and Programmer)</p>
+                                            <a href="https://www.instagram.com/ankur_narayan_"data-toggle="tooltip" title="Follow on Instagram"><i class="fa fa-instagram team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>
+                                            <a href="https://www.linkedin.com/in/ankur-narayan-singh-376395201/"data-toggle="tooltip" title="Connect on Linkedin"><i class="fa fa-linkedin team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>  
+                                            <a href="https://www.github.com/coolb0y"data-toggle="tooltip" title="Fork a project!"><i class="fa fa-github team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>                                  
+                                        </div>
+                                    </div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+                                 <!-- Slide -->
+                                 <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/vibhanshu.jpeg" alt="alternative">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">"He is a technology believer and keep faith in learning and let others learning.</p>
+                                            <p class="testimonial-author">Vibhanshu Garg</p>
+                                            <p style="color:#834cca;">Technical team (Web and Flutter Developer)</p>
+                                            <a href="https://www.instagram.com/garg.vibhanshu"data-toggle="tooltip" title="Follow on Instagram"><i class="fa fa-instagram team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>
+                                            <a href="https://www.linkedin.com/in/vibhanshu-garg/"data-toggle="tooltip" title="Connect on Linkedin"><i class="fa fa-linkedin team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>  
+                                            <a href="http://github.com/vibhanshu2001"data-toggle="tooltip" title="Fork a project!"><i class="fa fa-github team-icon" style="font-size: 1.5rem; background-color: #834cca; color: white; padding: 10px; border-radius: 10px;"></i></a>                                  
+                                        </div>
+                                    </div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+
+                                
+
+                            </div> <!-- end of swiper-wrapper -->
+
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <!-- end of add arrows -->
+
+                        </div> <!-- end of swiper-container -->
+                    </div> <!-- end of slider-container -->
+                    <!-- end of card slider -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of slider-1 -->
+    <!-- end of team -->
+    <!-- Footer -->
+    <div class="footer bg-dark-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-col first">
+                        <h6>About Hacodev</h6>
+                        <p class="p-small">A collab of amazing enthusiasts working under different technical fields namely web development, app development and ethical hacking, programming and many more. We are on a purpose of building a technical round off environment and looking for resurgence of same.</p>
+                    </div> <!-- end of footer-col -->
+                    <div class="footer-col second">
+                        <h6>Summary</h6>
+                        <ul class="list-unstyled li-space-lg p-small">
+                            <li><a href="main.html#team">Team</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="#what-hacodev">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div> <!-- end of footer-col -->
+                    <div class="footer-col third">
+                        <span class="fa-stack">
+                            <a href="https://www.instagram.com/hacodev_011">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <p>Follow us on Instragram</p>
+                        <p class="p-small">We would love to hear from you <a
+                                href="mailto:hacodev20@gmail.com"><strong>hacodev20@gmail.com</strong></a></p>
+                    </div> <!-- end of footer-col -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->
+    <!-- end of footer -->
+    <!-- Copyright -->
+    <div class="copyright bg-dark-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © <a href="https://hacodev.com">Hacodev</a> | Developed by <a href="https://github.com/vibhanshu2001"><b style="color: #834cca;">Vibhanshu Garg</b></a>
+                    </p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright -->
+    <!-- end of copyright -->
+
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+    <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip(); 
+
+    
+});
+// var alerted = localStorage.getItem('alerted') || '';
+//     if (alerted != 'yes') {
+//         do {
+//         var user_name = prompt("Please enter your name. \nDon't click on cancel as it will prompt you again and again for your name.");
+//         document.getElementById('name').innerHTML = user_name;
+//         document.getElementById('name1').innerHTML = user_name;
+//         document.getElementById('name2').innerHTML = user_name;
+//         document.getElementById('name3').innerHTML = user_name;
+//     } while (user_name == null || user_name == "");
+//      localStorage.setItem('alerted','yes');
+//     }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacodev- Power of 011</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- Favicon  -->
+    <link rel="apple-touch-icon"type="image/x-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" type="image/x-icon"  sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" type="image/x-icon"  sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" type="image/x-icon"  sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" type="image/x-icon"  sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" type="image/x-icon"  sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" type="image/x-icon"  sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" type="image/x-icon"  sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" type="image/x-icon"  sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+        :root {
+            --color_base: rgb(38, 36, 49);
+            --color_pen: #fff;
+            --size: 20vmin;
+            --fog: calc(var(--size) / 1.2);
+            --scale: 4.8;
+        }
+
+        .p-flex {
+            display: flex;
+        }
+
+        .p-circle,
+        .fog::after {
+            border-radius: 50%;
+        }
+
+        body {
+            height: 100vh;
+            background-color: var(--color_base);
+            margin: 0;
+            overflow: hidden;
+            touch-action: none;
+        }
+
+        ::selection {
+            background-color: transparent;
+        }
+
+        .halloctober {
+            width: 100%;
+            height: 100%;
+        }
+
+        .halloctober__banner {
+            margin: auto;
+            padding: 3%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .typo {
+            color: var(--color_pen);
+            cursor: default;
+            /* font-family: 'Fredoka One', sans-serif; */
+            font-family: 'Lilita One', cursive;
+            font-size: var(--size);
+            font-weight: normal;
+            letter-spacing: 0.1rem;
+            margin: auto;
+            outline: none;
+            position: relative;
+            transform: skew(10deg, 2deg);
+            animation: float 2s ease-in-out infinite;
+        }
+
+        .typo:hover+.fog {
+            animation-play-state: paused;
+        }
+
+        .typo::before,
+        .typo::after {
+            color: transparent;
+            content: 'Hacodev';
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -10;
+        }
+
+        .typo::before {
+            animation: move_upper_shadow 2s ease-in-out infinite;
+            opacity: 0;
+            text-shadow: 6px 0 2px rgba(95, 40, 166, 0.9), 12px 0 2px rgba(26, 35, 126, 0.3);
+        }
+
+        .typo::after {
+            animation: move_bottom_shadow 2s ease-in-out infinite;
+            text-shadow: 2px 4px 2px rgba(95, 40, 166, 0.9), 4px 8px 2px rgba(26, 35, 126, 0.3);
+        }
+
+        @keyframes move_upper_shadow {
+
+            0%,
+            90%,
+            100% {
+                opacity: 0;
+                transform: translateX(-2%);
+            }
+
+            30% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes move_bottom_shadow {
+
+            0%,
+            90%,
+            100% {
+                opacity: 1;
+                transform: translate(0, 0);
+            }
+
+            30% {
+                opacity: 0;
+                transform: translateY(-3.5%);
+            }
+        }
+
+        @keyframes float {
+            50% {
+                transform: scaleY(1.01) skew(-0deg, -0deg);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .typo {
+                animation: none;
+                transform: none;
+            }
+
+            .typo::before,
+            .typo::after {
+                animation: none;
+            }
+        }
+
+        .fog {
+            --fog_neg: calc(var(--fog) * -1);
+            width: var(--fog);
+            height: var(--fog);
+            background-color: var(--color_base);
+            position: absolute;
+            top: var(--fog_neg);
+            left: var(--fog_neg);
+            transform: translate3d(0, 0, 0);
+            transform-origin: 0 50%;
+            animation: move_fog 13s 2s ease-in-out alternate infinite;
+        }
+
+        @keyframes move_fog {
+            50% {
+                transform: scale(var(--scale));
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .fog {
+                animation: none;
+            }
+        }
+
+        .fog::after {
+            --blur: calc(var(--fog) * 2);
+            --blur_neghalf: calc(var(--blur) / -2);
+            --filter: calc(var(--fog) / 30);
+            width: var(--blur);
+            height: var(--blur);
+            content: '';
+            background-color: var(--color_base);
+            filter: blur(var(--filter));
+            margin-top: var(--blur_neghalf);
+            margin-left: var(--blur_neghalf);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
+        #myBtn {
+            display: block;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #834cca;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        .corner-ribbon {
+            z-index: 100;
+            width: 200px;
+            background: #834cca;
+            position: absolute;
+            top: 25px;
+            left: -50px;
+            text-align: center;
+            line-height: 45px;
+            letter-spacing: 0.2px;
+            color: #f0f0f0;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+
+        section {
+            position: absolute;
+            border-radius: 50%;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="images/logo.png" alt="" style="z-index: -999; height: 100px; width: 100px;position: fixed;top: 0; right: 0;">
+    <main class="halloctober p-flex">
+        <div class="halloctober__banner p-flex">
+            <h1 class="typo">Hacodev</h1>
+            <div class="fog p-circle"></div>
+
+        </div>
+        <!-- alert('Dont click me! Click on the Launch button.'); -->
+    </main>
+    <div class="corner-ribbon bottom-left sticky orange" style="cursor: pointer;"><a
+            onClick="swal({
+                title: 'Error 011',
+  text: 'Don\'t click me. Click on the launch button at bottom!',
+  icon: 'error',
+  button: 'Try again',
+            })">Click on launch</a></div>
+    <!-- <button id="myBtn" title="launch">Launch</button> -->
+    <a href="main.html" id="myBtn" role="button" class="btn"><b>Launch</b> <img src="images/fast-forward.svg" alt=""
+            style="height: 30px; width: 30px;"></a>
+
+    <!-- <section>
+        <a href="index.html" role="button" class="btn btn-primary">
+            Hello
+        </a>
+    </section> -->
+    <!-- perloader -->
+    <div class="lds-hourglass"></div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    // function createParticle(x, y) {
+    //     var size = Math.random() * 50 + 10;
+
+    //     x -= (size / 2);
+    //     y -= (size / 2);
+
+    //     var particle = document.createElement('section');
+    //     document.body.appendChild(particle);
+
+    //     TweenMax.set(particle, {
+    //         x: x,
+    //         y: y,
+    //         width: size,
+    //         height: size,
+    //         background: function () {
+    //             return `hsl(${Math.random() * 90 + 200}, 50%, 50%)`;
+    //         }
+    //     });
+    //     TweenMax.to(particle, Math.random() * 2 + 1, {
+    //         x: x + (Math.random() - 0.5) * 200,
+    //         y: y + (Math.random() - 0.5) * 200,
+    //         opacity: 0,
+    //         scale: 0,
+    //         ease: Power2.easeOut,
+    //         onComplete: function () {
+    //             document.body.removeChild(particle);
+    //         }
+    //     })
+    // }
+
+    // window.addEventListener('mousemove', function (e) {
+    //     var x = e.clientX;
+    //     var y = e.clientY;
+    //     createParticle(x, y);
+    // });
+    // document.body.addEventListener('touchmove', function (e) {
+    //     var x = e.touches[0].clientX;
+    //     var y = e.touches[0].clientY;
+    //     e.preventDefault();
+    //     createParticle(x, y);
+    // });
+</script>
+
+</html>
